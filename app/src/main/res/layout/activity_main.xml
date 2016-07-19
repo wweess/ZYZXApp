@@ -34,7 +34,7 @@
             android:drawableTop="@drawable/main_radiobutton_muke"
             android:gravity="center"
             android:text="学习"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/main_radiobutton_font"
             android:textSize="20sp" />
 
         <RadioButton
@@ -47,7 +47,7 @@
             android:drawableTop="@drawable/main_radiobutton_fenlei"
             android:gravity="center"
             android:text="分类"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/main_radiobutton_font"
             android:textSize="20sp" />
 
         <RadioButton
@@ -60,7 +60,7 @@
             android:drawableTop="@drawable/main_radiobutton_faxian"
             android:gravity="center"
             android:text="发现"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/main_radiobutton_font"
             android:textSize="20sp" />
 
         <RadioButton
@@ -73,7 +73,7 @@
             android:drawableTop="@drawable/main_radiobutton_wode"
             android:gravity="center"
             android:text="我的"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/main_radiobutton_font"
             android:textSize="20sp" />
     </RadioGroup>
 </LinearLayout>
