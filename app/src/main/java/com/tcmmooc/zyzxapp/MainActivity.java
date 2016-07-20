@@ -38,36 +38,46 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     }
 
     private void initView() {
-        frameLayout = (FrameLayout) findViewById(R.id.main_framelayout_top_fl);
+        //获取radiogroup控件
         main_radiogroup_rg = (RadioGroup) findViewById(R.id.main_radiogroup_rg);
     }
 
     private void initData() {
+        //获取碎片管理器
         fragmentManager = getSupportFragmentManager();
+        //初始化list碎片集合
         fragments = new ArrayList<>();
+        //获取muke碎片
         MuKeFragment muKeFragment = new MuKeFragment();
+        //获取faxian碎片
         FaXianFragment faXianFragment = new FaXianFragment();
+        //获取fenlei碎片
         FenLeiFragment fenLeiFragment = new FenLeiFragment();
+        //获取wode碎片
         WoDeFragment woDeFragment = new WoDeFragment();
         fragments.add(muKeFragment);
         fragments.add(fenLeiFragment);
         fragments.add(faXianFragment);
         fragments.add(woDeFragment);
+       //默认首页为muke
+        //开启碎片事务
         transaction = fragmentManager.beginTransaction();
+        //碎片放入容器
         transaction.add(R.id.main_framelayout_top_fl, fragments.get(indext));
+        //提交事务
         transaction.commit();
     }
 
-
     private void initListener() {
+        //给radiogroup添加监听
         main_radiogroup_rg.setOnCheckedChangeListener(this);
     }
-
 
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int i) {
         switch (i) {
             case R.id.main_radiobutton_muke:
+
                 indext = 0;
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main_framelayout_top_fl, fragments.get(indext));
