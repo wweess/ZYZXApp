@@ -73,18 +73,19 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 transaction.replace(R.id.main_framelayout_top_fl, fragments.get(indext));
                 transaction.commit();
                 break;
-            case R.id.main_radiobutton_faxian:
+            case R.id.main_radiobutton_fenlei:
                 indext = 1;
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main_framelayout_top_fl, fragments.get(indext));
                 transaction.commit();
                 break;
-            case R.id.main_radiobutton_fenlei:
+            case R.id.main_radiobutton_faxian:
                 indext = 2;
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.main_framelayout_top_fl, fragments.get(indext));
                 transaction.commit();
                 break;
+
             case R.id.main_radiobutton_wode:
                 indext = 3;
                 transaction = fragmentManager.beginTransaction();
